@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//home/emi/work/**)",
+      "Bash(systemctl status:*)",
+      "Bash(journalctl -u chrome-remote-desktop@emi -n 50 --no-pager)",
+      "Read(//opt/google/chrome-remote-desktop/**)",
+      "Read(//usr/lib/systemd/system/**)",
+      "Bash(journalctl -u chrome-remote-desktop@emi -n 30 --no-pager)",
+      "Read(//run/user/1000/gdm/**)",
+      "Read(//run/user/1000/**)",
+      "Read(//home/emi/.config/chrome-remote-desktop/**)",
+      "Bash(xargs ls:*)",
+      "Bash(find ~/.config/chrome-remote-desktop/ -name *.log)",
+      "Read(//tmp/**)",
+      "Read(//home/emi/**)",
+      "Bash(journalctl -u chrome-remote-desktop@emi --since 07:54 --no-pager)",
+      "Bash(find /run/user/1000/crd*)",
+      "Bash(xdpyinfo -display :0)"
+    ]
+  }
+}
