@@ -35,7 +35,7 @@ new = '''  def _launch_server(self, extra_x_args):
     # SHARED SESSION PATCH: Use existing GDM X session instead of virtual one.
     self.child_env["DISPLAY"] = ":0"
     self.child_env["XAUTHORITY"] = "/run/user/1000/gdm/Xauthority"
-    self.server_supports_randr = True
+    self.server_supports_randr = False
     # Dummy process so the monitor loop has a process to watch.
     self.server_proc = subprocess.Popen(["sleep", "infinity"],
                                         env=self.child_env)'''

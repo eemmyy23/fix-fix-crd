@@ -130,7 +130,7 @@ echo ""
 echo "[ Step 4 — dpkg hook (survives CRD updates) ]"
 
 cat > "$HOOK_FILE" << EOF
-DPkg::Post-Invoke {"python3 ${SCRIPT_DIR}/crd_patch_launch_server.py || true; python3 ${SCRIPT_DIR}/crd_patch_desktop_session.py || true;";};
+DPkg::Post-Invoke {"python3 '${SCRIPT_DIR}/crd_patch_launch_server.py' || true; python3 '${SCRIPT_DIR}/crd_patch_desktop_session.py' || true;";};
 EOF
 ok "dpkg hook written: $HOOK_FILE"
 
